@@ -5,20 +5,33 @@
 </head>
 <body>
 	<p><b><center>Reportes de escuelas</center></b></p>
-	<div id='data'>
-		<center><img src={{url}}></img></center>
-	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<form method="post" class="navbar-form" id="report">
+					<p><b>Datos del establecimiento</b></p>
+					<p>Escuela N°: XXX Nombre: XXX</p>
+					<p><b>Problemas reportados</b></p>
+					<ol>
+						<li>Problema1</li>
+						<li>Problema2</li>
+						<li>Problema3</li>
+						<li>...</li>
+						<li>ProblemaN</li>
+					</ol>
+					<p><b>Reportar problema</b></p>
+					<textarea name="problema" cols="30" rows="5" required="required" placeholder="problema" class="span2"></textarea>
+					<input type="date" name="date" min="5" required="required" placeholder="fecha" class="span2"/>
+					<input type="file" name="file" min="5" required="required" placeholder="foto" class="span2"/>
+					<input type="email" name="email" min="5" required="required" placeholder="email" class="span2"/>
+					<p></p>
+					<input type="submit" value="Reportar" id="report-btn" class="btn btn-default"/>
+				</form>
+			</div>
+			<div class="col-sm-8" id="data">
+				<center><img src={{url}} border="5"></img></center>
+			</div>
 	<p></p>
-	<center>
-		<div id='users'>
-			<p>Para reportar un problema en un establecimiento por favor <b>inicie sesión</b>.</p>
-			<form method="post" class="navbar-form" id="login">
-				<input type="text" name="username" autofocus="autofocus" min="5" required="required" placeholder="usuario" class="span2"/>
-				<input type="password" name="password" min="5" required="required" placeholder="contraseña" class="span2"/>
-				<input type="submit" value="Login" id='login-btn' class="btn btn-default"/>
-			</form>
-		</div>
-	</center>
 </body>
 <footer>
 	<!-- Latest compiled and minified CSS -->
@@ -29,5 +42,4 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-});
 </footer>
