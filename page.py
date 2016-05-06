@@ -18,7 +18,7 @@ for row in data:
 		url += "|"
 #print url
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def mainPage(url=url):
 	return render_template("index.html", url=url)
 
